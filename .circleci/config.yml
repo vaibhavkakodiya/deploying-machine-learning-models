@@ -54,6 +54,7 @@ jobs:
       - run:
           name: Deploy to Railway App (You must set RAILWAY_TOKEN env var)
           command: |
+            chmod +x ./scripts/deploy_to_railway.sh
             ./scripts/deploy_to_railway.sh
 
   section_07_test_and_upload_regression_model:
