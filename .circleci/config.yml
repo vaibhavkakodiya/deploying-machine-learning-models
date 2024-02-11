@@ -54,8 +54,7 @@ jobs:
       - run:
           name: Deploy to Railway App (You must set RAILWAY_TOKEN env var)
           command: |
-            cd section-07-ci-and-publishing/house-prices-api && railway link dd85c17f-be15-40b1-b810-17acacfad2dc berserk-health
-            railway up --detach
+            ./scripts/deploy_to_railway.sh
 
   section_07_test_and_upload_regression_model:
     <<: *defaults
